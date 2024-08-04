@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" width="256">
       <v-list nav>
         <v-list-item prepend-icon="mdi-home" title="Home" link to="/"></v-list-item>
-        <v-list-item prepend-icon="mdi-home" title="MiRNA" link to="/mirna"></v-list-item>
+        <v-list-item prepend-icon="mdi-dna" title="MiRNA" link to="/mirna"></v-list-item>
         <!-- Add more items as needed -->
       </v-list>
     </v-navigation-drawer>
@@ -36,6 +36,9 @@ export default {
 }
 </script>
 
-<style>
-/* Add any custom styles for your layout here */
+<style scoped>
+/* Custom styles for drawer item hover effect */
+.v-list-item:hover {
+  background-color: #2872a7; /* Light blue color */
+}
 </style>
