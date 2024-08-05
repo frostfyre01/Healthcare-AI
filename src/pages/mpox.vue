@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <div class="text-Left">
-      <div class="text-body-4 font-weight-light mb-n1 page-title"><v-icon>mdi-dna</v-icon>&nbsp;miRNA</div>
-      <h2 class="text-h4 font-weight-black">Lung cancer detection</h2>
+      <div class="text-body-4 font-weight-light mb-n1 page-title"><v-icon>mdi-virus-outline</v-icon>&nbsp;Image Classification</div>
+      <h2 class="text-h4 font-weight-black">MPOX detection</h2>
       <hr/>
       <br/>
     </div>

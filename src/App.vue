@@ -4,6 +4,8 @@
       <v-list nav>
         <v-list-item prepend-icon="mdi-home" title="Home" link to="/"></v-list-item>
         <v-list-item prepend-icon="mdi-dna" title="miRNA" link to="/mirna"></v-list-item>
+        <v-list-item prepend-icon="mdi-zodiac-cancer" title="Skin Cancer Detection" link to="/skincancer"></v-list-item>
+        <v-list-item prepend-icon="mdi-virus-outline" title="MPOX Detection" link to="/mpox"></v-list-item>
         <!-- Add more items as needed -->
       </v-list>
     </v-navigation-drawer>
