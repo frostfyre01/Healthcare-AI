@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" width="256">
       <v-list nav>
         <v-list-item prepend-icon="mdi-home" title="Home" link to="/"></v-list-item>
-        <v-list-item prepend-icon="mdi-dna" title="MiRNA" link to="/mirna"></v-list-item>
+        <v-list-item prepend-icon="mdi-dna" title="miRNA" link to="/mirna"></v-list-item>
         <!-- Add more items as needed -->
       </v-list>
     </v-navigation-drawer>
