@@ -40,7 +40,9 @@
       </template>
 
       <template v-slot:item.6>
-        <v-card title="Application" flat>...</v-card>
+        <v-card title="Application" flat>
+          <ImageUpload imagetype="mpox"/>
+        </v-card>
       </template>
 
 
@@ -49,7 +51,16 @@
 </template>
 
 <script>
+import ImageUpload from '../components/ImageUpload.vue';
 
+export default {
+  components: {
+    ImageUpload,
+  },
+  data: () => ({
+    
+  })
+}
 </script>
 
 <style scoped>
