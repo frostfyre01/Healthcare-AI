@@ -14,7 +14,7 @@
       class="mt-4 image-preview"
       contain
       max-height="200"
-      max-width="100%"
+      max-width="50%"
     />
 
     <!-- Button Row -->
@@ -25,7 +25,7 @@
           @click="submitImage"
           color="primary"
         >
-          Submit Image
+          Submit
         </v-btn>
       </v-col>
       <v-col cols="auto">
@@ -34,7 +34,7 @@
           @click="clearImage"
           color="red"
         >
-          Clear Image
+          Clear
         </v-btn>
       </v-col>
     </v-row>
