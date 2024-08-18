@@ -16,7 +16,27 @@
       max-height="200"
       max-width="50%"
     />
-
+    <!-- Classify Result -->
+    <v-table v-if="items">
+    <thead>
+      <tr>
+        <th class="text-left"></th>
+        <th class="text-left">Name</th>
+        <th class="text-left">Confidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        v-for="item in items"
+        :key="item.name"
+      >
+        <td style="width: 10%" :class="{ 'highlight': item.isTopClass }"><v-icon icon="mdi-check-circle" v-if="item.isTopClass"></v-icon></td>
+        <td :class="{ 'highlight': item.isTopClass }">{{ item.name }}</td>
+        <td :class="{ 'highlight': item.isTopClass }">{{ item.confidence }}%</td>
+      </tr>
+    </tbody>
+    </v-table>
+    
     <!-- Button Row -->
     <v-row class="mt-4" align="center">
       <v-col cols="auto">
@@ -54,7 +74,8 @@
     data() {
       return {
         image: null, // Holds the selected image file
-        imagePreview: null // Holds the image preview URL
+        imagePreview: null, // Holds the image preview URL
+        items: null
       };
     },
     methods: {
@@ -65,6 +86,7 @@
             const reader = new FileReader();
             reader.onload = e => {
               this.imagePreview = e.target.result;
+              this.items = null;
             };
             reader.readAsDataURL(this.image);
           } else {
@@ -78,6 +100,7 @@
       clearImage() {
         this.image = null;
         this.imagePreview = null;
+        this.items = null;
       },
       submitImage() {
         if (this.image) {
@@ -91,12 +114,23 @@
           })
           .then(response => response.json())
           .then(data => {
+            this.setResult(data.AllClasses, data.TopClass);
             console.log('Success:', data);
           })
           .catch(error => {
             console.error('Error:', error);
           });
         }
+      },
+      setResult(data, topClass) {
+        this.items = [];
+        data.forEach((item) => {
+          var name = item.Name.Name;
+          var confidence = (item.Confidence * 100).toFixed(1);
+          var isTopClass = (item.Name.Id == topClass.Name.Id);
+          this.items.push({name: name, confidence: confidence, isTopClass: isTopClass})
+        });
+
       }
     }
   };
@@ -115,6 +149,9 @@
     }
     .v-row {
     margin-bottom: 1rem; /* Space below the button row */
+    }
+    .highlight {
+      background-color: yellowgreen;
     }
   </style>
   
