@@ -1,12 +1,11 @@
 <template>
-    <v-card title="Upload Image" flat>
-      <v-file-input
-        v-model="image"
-        :accept="imagetype"
-        @change="handleImageUpload"
-        outlined
-        clearable
-      />
+    <v-file-input
+      v-model="image"
+      :accept="imagetype"
+      @change="handleImageUpload"
+      outlined
+      clearable
+    />
     <!-- Image Preview -->
     <v-img
       v-if="imagePreview"
@@ -38,6 +37,13 @@
     </v-table>
     
     <!-- Button Row -->
+    <v-card title="Upload Image" flat>
+    <v-progress-linear
+      v-if="isBusy"
+      color="yellow-darken-2"
+      indeterminate
+    >
+    </v-progress-linear>
     <v-row class="mt-4" align="center">
       <v-col cols="auto">
         <v-btn
@@ -75,7 +81,8 @@
       return {
         image: null, // Holds the selected image file
         imagePreview: null, // Holds the image preview URL
-        items: null
+        items: null,
+        isBusy: false,
       };
     },
     methods: {
@@ -107,13 +114,14 @@
           const formData = new FormData();
           formData.append('file', this.image);
           formData.append('imagetype', this.imagetype);
-  
+          this.isBusy = true;
           fetch(SERVICE_CONFIG.CLASSIFY_URL, {
             method: 'POST',
             body: formData
           })
           .then(response => response.json())
           .then(data => {
+            this.isBusy = false;
             this.setResult(data.AllClasses, data.TopClass);
             console.log('Success:', data);
           })
