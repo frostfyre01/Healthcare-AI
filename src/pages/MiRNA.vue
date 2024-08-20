@@ -7,49 +7,50 @@
       <br/>
     </div>
 
-    <v-stepper :items="['Overview', 'Data', 'Biomaker', 'Model', 'Metrics', 'Application']">
+    <v-tabs
+      v-model="tab"
+      align-tabs="left"
+      color="deep-purple-accent-4"
+    >
+      <v-tab value="overview">Overview</v-tab>
+      <v-tab value="data">Data</v-tab>
+      <v-tab value="model">Model</v-tab>
+      <v-tab value="metrics">Metrics</v-tab>
+      <v-tab value="application">Application</v-tab>      
+    </v-tabs>
 
-      <template v-slot:item.1>
-          <div>
-            <ul>
-              <li><strong>Lung cancer:</strong> Lung cancer remains one of the leading causes of cancer-related deaths globally. Early detection significantly improves survival rates and treatment outcomes.</li>
-              <li><strong>Traditional detection methods:</strong> Include chest X-rays, computed tomography (CT) scans, and biopsy procedures. These methods are typically invasive, have varying sensitivity and specificity, and may detect cancer at a later stage.</li>
-            </ul>
-            <hr style="width: 80%; margin: 20px auto;">
-            <ul>
-              <li><strong><v-icon color="blue">mdi-dna</v-icon>MicroRNAs (miRNAs):</strong> Small non-coding RNAs that regulate gene expression.</li>
-              <li><strong>Project goal:</strong> Develop a non-invasive diagnostic tool using miRNA profiling for early detection.</li>
-            </ul>
-          </div>
-      </template>
+    <v-card-text>
+      <v-tabs-window v-model="tab">
+        <v-tabs-window-item value="overview">
+          overview
+        </v-tabs-window-item>
 
-      <template v-slot:item.2>
-        <v-card title="Data" flat>How do I get the data</v-card>
-      </template>
+        <v-tabs-window-item value="data">
+          data
+        </v-tabs-window-item>
 
-      <template v-slot:item.3>
-        <v-card title="Biomaker" flat>...</v-card>
-      </template>
+        <v-tabs-window-item value="model">
+          model
+        </v-tabs-window-item>
 
-      <template v-slot:item.4>
-        <v-card title="Model" flat>...</v-card>
-      </template>
+        <v-tabs-window-item value="metrics">
+          metrics
+        </v-tabs-window-item>
 
-      <template v-slot:item.5>
-        <v-card title="Model Evaluation And Metrics" flat>...</v-card>
-      </template>
+        <v-tabs-window-item value="application">
 
-      <template v-slot:item.6>
-        <v-card title="Application" flat>...</v-card>
-      </template>
-
-
-    </v-stepper>
+        </v-tabs-window-item>
+      </v-tabs-window>
+    </v-card-text>
   </v-container>
 </template>
 
 <script>
-
+  export default {
+    data: () => ({
+      tab: null,
+    }),
+  }
 </script>
 
 <style scoped>
