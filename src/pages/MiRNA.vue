@@ -38,7 +38,7 @@
         </v-tabs-window-item>
 
         <v-tabs-window-item value="application">
-
+            <miRNA_Input/>
         </v-tabs-window-item>
       </v-tabs-window>
     </v-card-text>
@@ -46,11 +46,16 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
+import miRNA_Input from '../components/miRNA_Input.vue';
+
+export default {
+  components: {
+    miRNA_Input,
+  },
+  data: () => ({
       tab: null,
     }),
-  }
+}
 </script>
 
 <style scoped>
