@@ -6,7 +6,7 @@
         <v-list-item prepend-icon="mdi-dna" title="miRNA" link to="/mirna"></v-list-item>
         <v-list-item prepend-icon="mdi-zodiac-cancer" title="Skin Cancer Detection" link to="/skincancer"></v-list-item>
         <v-list-item prepend-icon="mdi-virus-outline" title="MPOX Detection" link to="/mpox"></v-list-item>
-        <!-- Add more items as needed -->
+        <v-list-item prepend-icon="mdi-virus-outline" title="Stock Trading Analysis" link to="/trading-analysis"></v-list-item>
       </v-list>
     </v-navigation-drawer>
 
