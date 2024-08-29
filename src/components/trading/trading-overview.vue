@@ -2,27 +2,29 @@
    <div class="container">
         <div class="section">
             <h2>Overview</h2>
-            <p>Welcome to our latest trading strategy presentation. Our approach combines advanced analytical techniques with a deep understanding of market trends to deliver superior results. In this document, we will walk you through the core principles of our strategy, its benefits, and how you can get started.</p>
+            <p>This summer, I took part in a high school stock trading competition, where I had the opportunity to delve into the world of stock trading with a fresh perspective. By leveraging the data analytics skills I learned from MIT BWSI, I was able to implement several trading strategies, which allowed me to explore and understand the nuances of rule-based trading more deeply. This experience not only enhanced my analytical skills but also provided valuable insights into how systematic approaches can influence trading outcomes. I was thrilled to apply theoretical knowledge in a practical setting and gain hands-on experience. </p>
+            <p>In light of this experience, I'm sharing the detailed analysis of the data-driven approach I employed, the specific trading rules I implemented, and the outcomes achieved. I aim to offer insights and practical guidance for others interested in rule-based trading, while also reflecting on the effectiveness of different strategies in achieving competitive results.</p>
         </div>
 
         <div class="section">
             <h2>How It Works</h2>
-            <p>Our trading strategy is built on a multi-faceted approach that includes technical analysis, fundamental analysis, and market sentiment tracking. By integrating these elements, we ensure a comprehensive understanding of market conditions and make informed trading decisions.</p>
+            <p>Stock trading is challenging for beginners due to the complexities of market analysis, emotional decision-making, and risk management. Understanding market trends, choosing the right stocks, and developing effective strategies can be overwhelming. Additionally, the emotional ups and downs and potential for losses can make trading stressful and difficult.</p>
+            <p>Rule-based trading involves following predefined criteria for buying and selling assets. Traders set specific rules based on indicators or data, which dictate entry and exit points. This method minimizes emotional influence and ensures consistent, systematic decision-making for more predictable trading outcomes.</p>
         </div>
 
         <div class="section">
             <h2>Benefits</h2>
-            <p>Adopting our trading strategy offers numerous advantages:</p>
-            <ul>
-                <li>Increased Accuracy: Higher precision in trade predictions and decision-making.</li>
-                <li>Time Efficiency: Automated processes save time and reduce manual effort.</li>
-                <li>Consistent Results: A proven track record of successful trades and strategies.</li>
-            </ul>
+            <p>Here are a few benefits of rule-based trading:</p>
+            <div style="margin-left: 30px;">
+                <ul>
+                    <li>Consistency: Adheres to predefined criteria, reducing emotional decision-making, avoiding impulsive trades.</li>
+                    <li>Backtesting: Allows for evaluation of strategies using historical data.</li>
+                    <li>Efficiency: Automates trading decisions, saving time and effort.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
-            <h2>Get Started</h2>
-            <p>Ready to elevate your trading game? Follow the link below to get started with our trading strategy and discover how it can transform your trading experience.</p>
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
         </div>
     </div>

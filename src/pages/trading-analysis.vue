@@ -15,7 +15,7 @@
         <v-tab value="overview">Overview</v-tab>
         <v-tab value="basics">Basics</v-tab>
         <v-tab value="mystrategy">My Strategy</v-tab>
-        <v-tab value="metrics">Metrics</v-tab>
+        <v-tab value="metrics">Performance Metrics</v-tab>
         <v-tab value="application">Application</v-tab>      
       </v-tabs>
   

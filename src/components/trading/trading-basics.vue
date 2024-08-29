@@ -2,27 +2,34 @@
    <div class="container">
         <div class="section">
             <h2>Basics</h2>
-            <p>Welcome to our latest trading strategy presentation. Our approach combines advanced analytical techniques with a deep understanding of market trends to deliver superior results. In this document, we will walk you through the core principles of our strategy, its benefits, and how you can get started.</p>
+            <p>The goal of a successful trading strategy is to achieve consistent profitability over time. Evaluating a trading strategy involves various factors. Here, I will focus on the fundamentals: Backtesting, Performance Metrics and Optimization.</p>
         </div>
 
         <div class="section">
-            <h2>How It Works</h2>
-            <p>Our trading strategy is built on a multi-faceted approach that includes technical analysis, fundamental analysis, and market sentiment tracking. By integrating these elements, we ensure a comprehensive understanding of market conditions and make informed trading decisions.</p>
+            <h2>Backtesting</h2>
+            <p>Backtesting is the process of testing a trading strategy using historical market data to evaluate its effectiveness and performance.</p>
         </div>
 
         <div class="section">
-            <h2>Benefits</h2>
-            <p>Adopting our trading strategy offers numerous advantages:</p>
-            <ul>
-                <li>Increased Accuracy: Higher precision in trade predictions and decision-making.</li>
-                <li>Time Efficiency: Automated processes save time and reduce manual effort.</li>
-                <li>Consistent Results: A proven track record of successful trades and strategies.</li>
-            </ul>
+            <h2>Performance Metrics</h2>
+            <p>Here are some key metrics for evaluating a strategy:</p>
+            <div style="margin-left: 30px;">
+                <ul>
+                    <li>Return on Investment (ROI): Measures the percentage gain or loss relative to the initial investment.</li>
+                    <li>Gross Profit: the sum of all profits from winning trades.</li>
+                    <li>Gross Loss: the sum of all losses from losing trades.</li>
+                    <li>Profit Factor: The ratio of gross profits to gross losses, indicating overall profitability.</li>
+                    <li>Maximum Drawdown: Indicates the largest peak-to-trough decline in equity during a specific period.</li>
+                    <li>Total Trade Number: The count of all executed trades within a specific period, reflecting trading activity.</li>
+                    <li>Win/Loss Ratio: Compares the number of winning trades to losing trades.</li>
+                    <li>Average Trade Profit/Loss: Calculates the average profit or loss per trade.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
-            <h2>Get Started</h2>
-            <p>Ready to elevate your trading game? Follow the link below to get started with our trading strategy and discover how it can transform your trading experience.</p>
+            <h2>Optimization</h2>
+            <p>Adjust and refine the strategy parameters to improve performance, but avoid overfitting to historical data, which can lead to poor future performance.</p>
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
         </div>
     </div>
@@ -32,7 +39,7 @@
 export default {
   methods: {
     handleButtonClick() {
-        this.$emit('change-tab', 'basics');
+        this.$emit('change-tab', 'mystrategy');
     }
   }
 }
