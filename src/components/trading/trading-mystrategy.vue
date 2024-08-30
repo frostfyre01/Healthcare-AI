@@ -1,27 +1,29 @@
 <template>
    <div class="container">
         <div class="section">
-            <h2>My Strategy</h2>
-            <p>Welcome to our latest trading strategy presentation. Our approach combines advanced analytical techniques with a deep understanding of market trends to deliver superior results. In this document, we will walk you through the core principles of our strategy, its benefits, and how you can get started.</p>
+            <h2>Trade Logic</h2>
+            <p>Start by identifying pairs of stocks with a high historical correlation, meaning their prices typically move in the same direction and by similar magnitudes. However, since markets are imperfect, there may be instances where these stocks diverge from their usual correlation patterns. These deviations can present trading opportunities, as prices are likely to revert to their typical correlation range over time. This approach is referred to as <b>Mean Reversion</b>.</p>
         </div>
 
         <div class="section">
             <h2>How It Works</h2>
-            <p>Our trading strategy is built on a multi-faceted approach that includes technical analysis, fundamental analysis, and market sentiment tracking. By integrating these elements, we ensure a comprehensive understanding of market conditions and make informed trading decisions.</p>
+            <p>For example, consider the pair of <b>SPY</b> (S&P 500 ETF) and <b>XYLD</b> (Global X S&P 500 Covered Call ETF). Both SPY and XYLD are correlated since they are both based on the S&P 500 Index. However, the covered call strategy employed by XYLD can cause its performance to diverge slightly from SPY, depending on market conditions.</p>
+            <p>To measure this divergence, I use the <b>Rate of Change (ROC)</b> indicator and calculate the ROC difference between the two stocks, using this difference as an entry signal.</p>
+            <p><b>Rate of Change (ROC)</b> measures the percentage change in price over a specified period, helping to assess the speed and direction of price movements. It is calculated as:</p>
+            <pre style="color: red;">ROC = [(Current Price - Price N Periods Ago) / Price N Periods Ago] × 100</pre>
         </div>
 
         <div class="section">
-            <h2>Benefits</h2>
-            <p>Adopting our trading strategy offers numerous advantages:</p>
-            <ul>
-                <li>Increased Accuracy: Higher precision in trade predictions and decision-making.</li>
-                <li>Time Efficiency: Automated processes save time and reduce manual effort.</li>
-                <li>Consistent Results: A proven track record of successful trades and strategies.</li>
-            </ul>
+            <h2>Trading Rules</h2>
+            <P><b>Entry Signal:</b> Monitor the ROC difference, with an ROC difference below -4% potentially signaling a buying opportunity.</P>
+            <p><b>Exit Signal:</b> To simplify the process, I use two fixed exit strategies and exit the position when either condition is met.</p> 
+            <p><b>Exit #1</b> <i>When: profit hits a predefined target level, such as +5%</i></p> 
+            <p><b>Exit #2</b> <i>When: the position has been held for more than 10 days</i></p>        
+            <p><b>Interpretation:</b> <i>Historically, the average ROC difference ranges between -3% and +3%. A significant divergence, such as an ROC difference below -4%, may indicate an anomaly or temporary market inefficiency, suggesting that SPY is underperforming relative to XYLD compared to their typical relationship. This deviation might suggest that SPY is undervalued, presenting a buying opportunity. Once a position is established, we aim to sell it at a +5% profit. If this target isn’t reached within a set period, we will exit the position, regardless of the outcome, whether a gain or a loss, and wait for the next signal.</i></p>
         </div>
 
         <div class="section">
-            <h2>Get Started</h2>
+            <h2>Rules</h2>
             <p>Ready to elevate your trading game? Follow the link below to get started with our trading strategy and discover how it can transform your trading experience.</p>
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
         </div>
@@ -32,7 +34,7 @@
 export default {
   methods: {
     handleButtonClick() {
-        this.$emit('change-tab', 'basics');
+        this.$emit('change-tab', 'metrics');
     }
   }
 }

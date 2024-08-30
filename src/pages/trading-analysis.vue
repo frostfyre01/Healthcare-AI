@@ -13,8 +13,8 @@
         color="deep-purple-accent-4"
       >
         <v-tab value="overview">Overview</v-tab>
-        <v-tab value="basics">Basics</v-tab>
         <v-tab value="mystrategy">My Strategy</v-tab>
+        <v-tab value="basics">Basics</v-tab>
         <v-tab value="metrics">Performance Metrics</v-tab>
         <v-tab value="application">Application</v-tab>      
       </v-tabs>
@@ -25,12 +25,12 @@
             <trading_overview @change-tab="handleTabChange"/>
           </v-tabs-window-item>
   
-          <v-tabs-window-item value="basics">
-            <trading_basics @change-tab="handleTabChange"/>
-          </v-tabs-window-item>
-  
           <v-tabs-window-item value="mystrategy">
             <trading_mystrategy @change-tab="handleTabChange"/>
+          </v-tabs-window-item>
+
+          <v-tabs-window-item value="basics">
+            <trading_basics @change-tab="handleTabChange"/>
           </v-tabs-window-item>
   
           <v-tabs-window-item value="metrics">

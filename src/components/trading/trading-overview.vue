@@ -7,7 +7,7 @@
         </div>
 
         <div class="section">
-            <h2>How It Works</h2>
+            <h2>How Rule-based Trading Works</h2>
             <p>Stock trading is challenging for beginners due to the complexities of market analysis, emotional decision-making, and risk management. Understanding market trends, choosing the right stocks, and developing effective strategies can be overwhelming. Additionally, the emotional ups and downs and potential for losses can make trading stressful and difficult.</p>
             <p>Rule-based trading involves following predefined criteria for buying and selling assets. Traders set specific rules based on indicators or data, which dictate entry and exit points. This method minimizes emotional influence and ensures consistent, systematic decision-making for more predictable trading outcomes.</p>
         </div>
@@ -17,9 +17,9 @@
             <p>Here are a few benefits of rule-based trading:</p>
             <div style="margin-left: 30px;">
                 <ul>
-                    <li>Consistency: Adheres to predefined criteria, reducing emotional decision-making, avoiding impulsive trades.</li>
-                    <li>Backtesting: Allows for evaluation of strategies using historical data.</li>
-                    <li>Efficiency: Automates trading decisions, saving time and effort.</li>
+                    <li><b>Consistency:</b> <i>Adheres to predefined criteria, reducing emotional decision-making, avoiding impulsive trades.</i></li>
+                    <li><b>Backtesting:</b> <i>Allows for evaluation of strategies using historical data.</i></li>
+                    <li><b>Efficiency:</b> <i>Automates trading decisions, saving time and effort.</i></li>
                 </ul>
             </div>
         </div>
@@ -34,7 +34,7 @@
 export default {
   methods: {
     handleButtonClick() {
-        this.$emit('change-tab', 'basics');
+        this.$emit('change-tab', 'mystrategy');
     }
   }
 }

@@ -15,14 +15,14 @@
             <p>Here are some key metrics for evaluating a strategy:</p>
             <div style="margin-left: 30px;">
                 <ul>
-                    <li>Return on Investment (ROI): Measures the percentage gain or loss relative to the initial investment.</li>
-                    <li>Gross Profit: the sum of all profits from winning trades.</li>
-                    <li>Gross Loss: the sum of all losses from losing trades.</li>
-                    <li>Profit Factor: The ratio of gross profits to gross losses, indicating overall profitability.</li>
-                    <li>Maximum Drawdown: Indicates the largest peak-to-trough decline in equity during a specific period.</li>
-                    <li>Total Trade Number: The count of all executed trades within a specific period, reflecting trading activity.</li>
-                    <li>Win/Loss Ratio: Compares the number of winning trades to losing trades.</li>
-                    <li>Average Trade Profit/Loss: Calculates the average profit or loss per trade.</li>
+                    <li><b>Return on Investment (ROI):</b> <i>Measures the percentage gain or loss relative to the initial investment.</i></li>
+                    <li><b>Gross Profit:</b> <i>the sum of all profits from winning trades.</i></li>
+                    <li><b>Gross Loss:</b> <i>the sum of all losses from losing trades.</i></li>
+                    <li><b>Profit Factor:</b> <i>The ratio of gross profits to gross losses, indicating overall profitability.</i></li>
+                    <li><b>Maximum Drawdown:</b> <i>Indicates the largest peak-to-trough decline in equity during a specific period.</i></li>
+                    <li><b>Total Trade Number:</b> <i>The count of all executed trades within a specific period, reflecting trading activity.</i></li>
+                    <li><b>Win/Loss Ratio:</b> <i>Compares the number of winning trades to losing trades.</i></li>
+                    <li><b>Average Trade Profit/Loss:</b> <i>Calculates the average profit or loss per trade.</i></li>
                 </ul>
             </div>
         </div>
