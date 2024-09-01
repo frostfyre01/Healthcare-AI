@@ -2,7 +2,7 @@
    <div class="container">
         <div class="section">
             <h2>Overview</h2>
-            <p>This summer, I took part in a high school stock trading competition, where I had the opportunity to delve into the world of stock trading with a fresh perspective. By leveraging the data analytics skills I learned from MIT BWSI, I was able to implement several trading strategies, which allowed me to explore and understand the nuances of rule-based trading more deeply. This experience not only enhanced my analytical skills but also provided valuable insights into how systematic approaches can influence trading outcomes. I was thrilled to apply theoretical knowledge in a practical setting and gain hands-on experience. </p>
+            <p>This summer, I took part in a high school stock trading competition, where I had the opportunity to delve into the world of stock trading with a fresh perspective. By leveraging the data analytics skills, I was able to implement several trading strategies, which allowed me to explore and understand the nuances of rule-based trading more deeply. This experience not only enhanced my analytical skills but also provided valuable insights into how systematic approaches can influence trading outcomes. I was thrilled to apply theoretical knowledge in a practical setting and gain hands-on experience. </p>
             <p>In light of this experience, I'm sharing the detailed analysis of the data-driven approach I employed, the specific trading rules I implemented, and the outcomes achieved. I aim to offer insights and practical guidance for others interested in rule-based trading, while also reflecting on the effectiveness of different strategies in achieving competitive results.</p>
         </div>
 

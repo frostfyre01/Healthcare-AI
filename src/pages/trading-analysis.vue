@@ -15,6 +15,7 @@
         <v-tab value="overview">Overview</v-tab>
         <v-tab value="mystrategy">My Strategy</v-tab>
         <v-tab value="basics">Basics</v-tab>
+        <v-tab value="implement">Implementation</v-tab>
         <v-tab value="metrics">Performance Metrics</v-tab>
         <v-tab value="application">Application</v-tab>      
       </v-tabs>
@@ -33,6 +34,10 @@
             <trading_basics @change-tab="handleTabChange"/>
           </v-tabs-window-item>
   
+          <v-tabs-window-item value="implement">
+            <trading_implement @change-tab="handleTabChange"/>
+          </v-tabs-window-item>
+
           <v-tabs-window-item value="metrics">
             <trading_metrics @change-tab="handleTabChange"/>
           </v-tabs-window-item>
@@ -46,8 +51,9 @@
   
   <script>
   import trading_overview from '../components/trading/trading-overview.vue'
-  import trading_basics from '../components/trading/trading-basics.vue'
   import trading_mystrategy from '../components/trading/trading-mystrategy.vue'
+  import trading_basics from '../components/trading/trading-basics.vue'
+  import trading_implement from '../components/trading/trading-implement.vue'
   import trading_metrics from '../components/trading/trading-metrics.vue'
 
   export default {
