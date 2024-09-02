@@ -59,6 +59,7 @@
   export default {
     components: {
       trading_overview,
+      trading_implement,
       trading_basics,
       trading_mystrategy,
       trading_metrics,

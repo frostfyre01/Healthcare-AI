@@ -1,28 +1,59 @@
 <template>
    <div class="container">
+        <v-alert
+            color="info"
+            icon="$info"
+            title="Alert title"
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus..."
+        ></v-alert>
+
         <div class="section">
-            <h2>Metrics</h2>
-            <p>Welcome to our latest trading strategy presentation. Our approach combines advanced analytical techniques with a deep understanding of market trends to deliver superior results. In this document, we will walk you through the core principles of our strategy, its benefits, and how you can get started.</p>
+            <h2>Correlation</h2>
+            <p>First, let's examine the correlation between <b>SPY</b> and <b>XYLD</b>. The historical data for the past 10 years is downloaded from Yahoo Finance and combined into a single DataFrame. The .corr() function is then used to calculate the correlation. As expected, SPY and XYLD demonstrate a very high correlation.</p>
+            <div class="code">
+                corr_matrix = df.corr()
+            </div>                            
+            <div class="code">
+                correlation = df['SPY'].corr(df['XYLD'])
+            </div>            
+            <img src="@/assets/images/correlation_spy_xyld.png">
         </div>
 
         <div class="section">
-            <h2>How It Works</h2>
-            <p>Our trading strategy is built on a multi-faceted approach that includes technical analysis, fundamental analysis, and market sentiment tracking. By integrating these elements, we ensure a comprehensive understanding of market conditions and make informed trading decisions.</p>
+            <h2>Calculate Rate of Change</h2>
+            <div class="code">
+                <p>df['SPY_shifted'] = df['SPY'].shift(shift_down_value)</p>
+                <p>df['SPY_ROC'] = (df['SPY'] - df['SPY_shifted']) / df['SPY_shifted']</p>
+                <p>df['ROC_Difference'] = df['SPY_ROC'] - df['XYLD_ROC']</p>
+            </div>            
+            <img src="@/assets/images/roc_spy_xyld.png">
         </div>
 
         <div class="section">
-            <h2>Benefits</h2>
-            <p>Adopting our trading strategy offers numerous advantages:</p>
-            <ul>
-                <li>Increased Accuracy: Higher precision in trade predictions and decision-making.</li>
-                <li>Time Efficiency: Automated processes save time and reduce manual effort.</li>
-                <li>Consistent Results: A proven track record of successful trades and strategies.</li>
+            <h2>Simulating Trades</h2>
+            <p>Define the buy threshold, maximum number of position days, and target percentage, apply to the following trading rules:</p>
+            <ul style="margin-left: 30px;">
+                <li><b>Entry Criteria:</b> Buy when the ROC difference falls below the buy threshold.</li>
+                <li><b>Exit Criteria #1:</b> Sell if the price rises by more than the target percentage from the entry price.</li>
+                <li><b>Exit Criteria #2:</b> Sell if the holding period surpasses the maximum number of position days.</li>                
             </ul>
         </div>
 
         <div class="section">
-            <h2>Get Started</h2>
-            <p>Ready to elevate your trading game? Follow the link below to get started with our trading strategy and discover how it can transform your trading experience.</p>
+            <h2>Optimization</h2>
+            <p>Adjust and refine the strategy parameters to improve performance, but avoid overfitting to historical data, which can lead to poor future performance.</p>
+            <div class="code">
+                <p>BUY_THREAHOLD = -0.005</p>
+                <p>SELL_TARGET = 0.035</p>
+                <p>MAX_POSITION_DAY = 10</p>
+            </div>            
+        </div>
+
+        <div class="section">
+            <h2>Backtesting Result</h2>
+            <p>Over the past 10 years, our simulation resulted in <b>106 trades</b>. These will be evaluated in the following section.</p>
+            <img src="@/assets/images/trade_spy_xyld.png">
+            <p></p>
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
         </div>
     </div>
@@ -32,7 +63,7 @@
 export default {
   methods: {
     handleButtonClick() {
-        this.$emit('change-tab', 'basics');
+        this.$emit('change-tab', 'metrics');
     }
   }
 }
@@ -71,6 +102,13 @@ h1 {
 }
 .section p {
     margin: 10px 0;
+}
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(238, 255, 240);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 </style>
   
