@@ -1,5 +1,11 @@
 <template>
    <div class="container">
+        <v-alert type="info" border="left" prominent>
+            Please use the following link to access the Google Colab Jupyter Notebook:
+            <v-btn text @click="openLink" class="ml-2">Open Colab Notebook</v-btn>
+            <v-btn text @click="downloadNotebook('SPY_Analysis.ipynb')" class="ml-2">Download Notebook</v-btn>
+        </v-alert>
+
         <div class="section">
             <h2>Performance Metrics</h2>
             <p>The goal of a successful trading strategy is to achieve consistent profitability over time. Evaluating a trading strategy involves various factors. I will only focus on the fundamentals:</p>
@@ -55,13 +61,24 @@
 
         <div class="section">
             <h2>Trade Profit Percentage</h2>
-            <p></p>
+            <p>Trade Profit Percentage is calculated as:</p>
+            <img src="@/assets/images/trade_percent.png">
+            <p>Ideally, the trade profit percentage should be evenly distributed to ensure consistent performance and reduce volatility, balancing gains and losses effectively.Extremely large profits or losses are not favorable as they introduce significant volatility and risk, making it harder to maintain consistent performance and manage overall trading strategy effectively.</p>
             <img src="@/assets/images/score_spy_xyld.png">
+            <p><b>Calculate Expected Return:</b> The expected return of the strategy can be computed using the formula:</p>
+            <div class="code">
+                Expected Return = (Win Rate × Average Profit Percentage) − (Loss Rate × Average Loss)
+            </div>
+            <div class="code">
+                Expected Return = (0.65 × 2.86%) − (0.35 × 2.14%) = 1.11%
+            </div>
+            <p><i>This indicates that the strategy is projected to yield an average return of around +1.10% per trade. With a win rate of 65%, it offers a favorable risk/reward ratio, as the average gain exceeds the average loss.</i></p>
         </div>
 
         <div class="section">
-            <h2>Return on Investment (ROI)</h2>
-            <p>Ready to elevate your trading game? Follow the link below to get started with our trading strategy and discover how it can transform your trading experience.</p>
+            <h2>Summary</h2>
+            <p>This simple trading strategy has shown good performance over the last decade. It has a Profit Factor of 2.32, meaning it earns more than twice as much from winning trades compared to losing trades. It wins 65% of the time, so it has a higher success rate than most strategies. On average, each trade yields a return of 1.11%. The 106 trades are evenly distributed, which helps in managing risk and avoiding large losses. Importantly, there are no significant drawdowns, indicating stable performance without major drops in equity. Overall, the strategy appears to be both profitable and reliable.</p>
+            <p>We’ll see how it performs against new, untested data in a real-world stock trading competition.</p>            
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
         </div>
 
@@ -73,7 +90,19 @@ export default {
   methods: {
     handleButtonClick() {
         this.$emit('change-tab', 'basics');
-    }
+    },
+    openLink() {
+      window.open('https://colab.research.google.com/drive/1m-PmvNwIWM7DBu0JbYI9-acTEg0f83Iz?usp=sharing', '_blank');
+    },
+    downloadNotebook(fileName) {
+        const notebookUrl = '/downloads/' + fileName;
+        const link = document.createElement('a');
+        link.href = notebookUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }        
   }
 }
 </script>

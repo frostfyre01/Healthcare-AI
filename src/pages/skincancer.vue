@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <div class="text-Left">
-      <div class="text-body-4 font-weight-light mb-n1 page-title"><v-icon>mdi-zodiac-cancer</v-icon>&nbsp;Image Classification</div>
+      <div class="text-body-4 font-weight-light mb-n1 page-title"><v-icon>mdi-pill</v-icon>&nbsp;Image Classification</div>
       <h2 class="text-h4 font-weight-black">Skin cancer detection</h2>
       <hr/>
       <br/>

@@ -1,11 +1,10 @@
 <template>
    <div class="container">
-        <v-alert
-            color="info"
-            icon="$info"
-            title="Alert title"
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus..."
-        ></v-alert>
+        <v-alert type="info" border="left" prominent>
+            Please use the following link to access the Google Colab Jupyter Notebook:
+            <v-btn text @click="openLink" class="ml-2">Open Colab Notebook</v-btn>
+            <v-btn text @click="downloadNotebook('SPY_Analysis.ipynb')" class="ml-2">Download Notebook</v-btn>
+        </v-alert>
 
         <div class="section">
             <h2>Correlation</h2>
@@ -64,8 +63,21 @@ export default {
   methods: {
     handleButtonClick() {
         this.$emit('change-tab', 'metrics');
-    }
+    },
+    openLink() {
+      window.open('https://colab.research.google.com/drive/1m-PmvNwIWM7DBu0JbYI9-acTEg0f83Iz?usp=sharing', '_blank');
+    },
+    downloadNotebook(fileName) {
+        const notebookUrl = '/downloads/' + fileName;
+        const link = document.createElement('a');
+        link.href = notebookUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }      
   }
+
 }
 </script>
   

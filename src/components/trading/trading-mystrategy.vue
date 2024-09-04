@@ -43,7 +43,7 @@
 export default {
   methods: {
     handleButtonClick() {
-        this.$emit('change-tab', 'basics');
+        this.$emit('change-tab', 'implement');
     }
   }
 }
