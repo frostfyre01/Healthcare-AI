@@ -89,7 +89,7 @@
 export default {
   methods: {
     handleButtonClick() {
-        this.$emit('change-tab', 'basics');
+        this.$emit('change-tab', 'competition');
     },
     openLink() {
       window.open('https://colab.research.google.com/drive/1m-PmvNwIWM7DBu0JbYI9-acTEg0f83Iz?usp=sharing', '_blank');
