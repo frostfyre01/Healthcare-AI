@@ -31,9 +31,9 @@
         <div class="section">
             <h2>Profitability</h2>
             <p>A <b>profit factor</b> greater than 1 indicates that the strategy generates more profit than loss, while a profit factor below 1 suggests that losses outweigh profits. A higher profit factor signifies a more favorable risk-to-reward ratio.</p>
-            <img src="@/assets/images/profit_factor.png">
+            <img src="@/assets/images/trading/profit_factor.png">
             <p><b>Win Rate</b> represents the percentage of winning trades out of the total number of trades executed over a given period.</p>
-            <img src="@/assets/images/win_rate.png">
+            <img src="@/assets/images/trading/win_rate.png">
             <p>A high win rate indicates that a trading strategy has a higher proportion of winning trades compared to losing trades. While this suggests that the strategy is effective at identifying profitable opportunities. However it does not necessarily guarantee overall profitability. </p>
             <p>For example:
                 <div class="code">
@@ -49,22 +49,22 @@
                 When a trading strategy shows a low win rate yet remains profitable, it is essential to determine whether the success is attributable to random chance or a solid underlying strategy. Key challenges include frequent drawdowns and psychological stress.
             </div>
             <p><b>Quick Summary:</b> With a profit pactor of 2.3 and a 65% win rate over the past 10 years, based on enough number of trades, this strategy appears effective, with good profitability and a high rate of successful trades.</p>
-            <img src="@/assets/images/result_spy_xyld.png">
+            <img src="@/assets/images/trading/result_spy_xyld.png">
         </div>
 
         <div class="section">
             <h2>Return on Investment (ROI)</h2>
             <p>When calculating ROI, the Annual Percentage Rate (APR) is typically used. This strategy has achieved an annual rate of 10.9% over the past 10 years. Additionally, it's important to consider factors such as the equity curve and drawdowns. Ideally, the equity curve should exhibit a consistent upward trend, and significant drawdowns should be minimized.</p>
-            <img src="@/assets/images/equity_spy_xyld.png">
+            <img src="@/assets/images/trading/equity_spy_xyld.png">
             <p>When applying <b>linear regression</b> to the equity curve, the observed upward slope suggests that the strategy is likely to remain profitable over time.</p>            
         </div>        
 
         <div class="section">
             <h2>Trade Profit Percentage</h2>
             <p>Trade Profit Percentage is calculated as:</p>
-            <img src="@/assets/images/trade_percent.png">
+            <img src="@/assets/images/trading/trade_percent.png">
             <p>Ideally, the trade profit percentage should be evenly distributed to ensure consistent performance and reduce volatility, balancing gains and losses effectively.Extremely large profits or losses are not favorable as they introduce significant volatility and risk, making it harder to maintain consistent performance and manage overall trading strategy effectively.</p>
-            <img src="@/assets/images/score_spy_xyld.png">
+            <img src="@/assets/images/trading/score_spy_xyld.png">
             <p><b>Calculate Expected Return:</b> The expected return of the strategy can be computed using the formula:</p>
             <div class="code">
                 Expected Return = (Win Rate × Average Profit Percentage) − (Loss Rate × Average Loss)

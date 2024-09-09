@@ -15,7 +15,7 @@
             <div class="code">
                 correlation = df['SPY'].corr(df['XYLD'])
             </div>            
-            <img src="@/assets/images/correlation_spy_xyld.png">
+            <img src="@/assets/images/trading/correlation_spy_xyld.png">
         </div>
 
         <div class="section">
@@ -25,7 +25,7 @@
                 <p>df['SPY_ROC'] = (df['SPY'] - df['SPY_shifted']) / df['SPY_shifted']</p>
                 <p>df['ROC_Difference'] = df['SPY_ROC'] - df['XYLD_ROC']</p>
             </div>            
-            <img src="@/assets/images/roc_spy_xyld.png">
+            <img src="@/assets/images/trading/roc_spy_xyld.png">
         </div>
 
         <div class="section">
@@ -51,7 +51,7 @@
         <div class="section">
             <h2>Backtesting Result</h2>
             <p>Over the past 10 years, our simulation resulted in <b>106 trades</b>. These will be evaluated in the following section.</p>
-            <img src="@/assets/images/trade_spy_xyld.png">
+            <img src="@/assets/images/trading/trade_spy_xyld.png">
             <p></p>
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
         </div>

@@ -2,7 +2,7 @@
    <div class="container">
         <div class="section">
             <h2>Trade Logic</h2>
-            <p>Start by identifying pairs of stocks with a high historical correlation, meaning their prices typically move in the same direction and by similar magnitudes. However, since markets are imperfect, there may be instances where these stocks diverge from their usual correlation patterns. These deviations can present trading opportunities, as prices are likely to revert to their typical correlation range over time. This approach is referred to as <b>Mean Reversion</b>.</p>
+            <p>My strategy uses the <b>Mean Reversion</b> approach. Start by identifying pairs of stocks with a high historical correlation, where their prices usually move together in the same direction and by similar magnitudes. Since markets are imperfect, deviations from this correlation can occur. These deviations present trading opportunities, as prices are expected to revert to their typical correlation range over time.</p>
         </div>
 
         <div class="section">
@@ -28,12 +28,14 @@
             <p><b>Exit Signal:</b> I use two fixed exit strategies and exit the position when either condition is met.</p> 
             <p><b>Exit #1</b> <i>When: profit hits a predefined target level, such as +5%</i></p> 
             <p><b>Exit #2</b> <i>When: the position has been held for more than 10 days</i></p>        
-            <p><b>Interpretation:</b> <i>Historically, the average ROC difference ranges between -3% and +3%. A significant divergence, such as an ROC difference below -4%, may indicate an anomaly or temporary market inefficiency, suggesting that SPY is underperforming relative to XYLD compared to their typical relationship. This deviation might suggest that SPY is undervalued, presenting a buying opportunity. Once a position is established, we aim to sell it at a +5% profit. If this target isn’t reached within a set period, we will exit the position, regardless of the outcome, whether a gain or a loss, and wait for the next signal.</i></p>
+            <p><i>Notes: The parameters provided are examples only; we will optimize them during the evaluation process.</i></p>
+            <p><b>Interpretation:</b> <i>Historically, the average ROC difference ranges between -3% and +3%. A significant divergence, such as an ROC difference below -4%, may indicate an anomaly or temporary market inefficiency, suggesting that SPY is underperforming relative to XYLD compared to their typical relationship. This deviation might suggest that SPY is undervalued, presenting a <b>buying</b> opportunity. Once a position is established, we aim to <b>sell</b> it at a +5% profit. If this target isn’t reached within a set period, we will <b>exit/close</b> the position, regardless of the outcome, whether a gain or a loss, and wait for the next signal.</i></p>
+
         </div>
 
         <div class="section">
             <h2>Validation</h2>
-            <p>When developing stock trading strategies, it's essential to stay cautious. Even if an idea seems promising at first glance, we must thoroughly use back-testing to validate its potential profitability and effectiveness before proceeding.</p>
+            <p>Once the trading rule is defined, it's crucial to use back-testing to thoroughly validate the strategy’s potential profitability and effectiveness. This ensures that the strategy performs well under historical market conditions before implementation.</p>
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
         </div>
     </div>

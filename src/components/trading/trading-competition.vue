@@ -4,14 +4,14 @@
             <h2>More Strategies</h2>
             <p>Before entering the stock trading competition, I created several new trading strategies based on the same trading logic, focusing mainly on highly correlated stock ETFs. Most of these strategies produced comparable results, with a Profit Factor (PF) exceeding 2 and a win rate above 65%. This supports the effectiveness of the trading logic and has significantly boosted my confidence in the strategy.</p>
             <p>Here, I have included two equity curves and the Annualized Percentage Return (APR).</p>
-            <img src="@/assets/images/equity_qqq_qyld.png">
+            <img src="@/assets/images/trading/equity_qqq_qyld.png">
             <p></p>
-            <img src="@/assets/images/equity_iwm_spy.png">
+            <img src="@/assets/images/trading/equity_iwm_spy.png">
         </div>
 
         <div class="section">
             <h2>Stock Trading Competition</h2>
-            <img src="@/assets/images/competition.png">
+            <img src="@/assets/images/trading/competition.png">
             <p>Once the stock trading competition starts, I can simply run all the trading strategies before the market closes each day to check for any signals to trade, thanks to the rule-based trading approach.</p>
             <p>Using the newly developed trading strategies, I achieved a <b>17%</b> profit over a 2-month period and won first place. During the same period, the benchmark broad market index fund gained less than 4%.</p>
         </div>
