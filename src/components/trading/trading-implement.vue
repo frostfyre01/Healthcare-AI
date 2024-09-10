@@ -8,7 +8,7 @@
 
         <div class="section">
             <h2>Correlation</h2>
-            <p>First, let's examine the correlation between <b>SPY</b> and <b>XYLD</b>. The historical data for the past 10 years is downloaded from Yahoo Finance and combined into a single DataFrame. The .corr() function is then used to calculate the correlation. As expected, SPY and XYLD demonstrate a very high correlation.</p>
+            <p>First, let's examine the correlation between <b>SPY</b> and <b>XYLD</b>. The historical data for the past 10 years is downloaded and combined into a single DataFrame. The .corr() function is then used to calculate the correlation. As expected, SPY and XYLD demonstrate a very high correlation.</p>
             <div class="code">
                 corr_matrix = df.corr()
             </div>                            

@@ -11,21 +11,21 @@
             <p>The goal of a successful trading strategy is to achieve consistent profitability over time. Evaluating a trading strategy involves various factors. I will only focus on the fundamentals:</p>
             <div style="margin-left: 30px;">
                 <ul>
-                    <li><b>Return on Investment (ROI):</b> <i>Measures the percentage gain or loss relative to the initial investment.</i></li>
+                    <li><b>Total Trade Number:</b> <i>The count of all executed trades within a specific period, reflecting trading activity.</i></li>
                     <li><b>Gross Profit:</b> <i>the sum of all profits from winning trades.</i></li>
                     <li><b>Gross Loss:</b> <i>the sum of all losses from losing trades.</i></li>
                     <li><b>Profit Factor:</b> <i>The ratio of gross profits to gross losses, indicating overall profitability.</i></li>
-                    <li><b>Maximum Drawdown:</b> <i>Indicates the largest peak-to-trough decline in equity during a specific period.</i></li>
-                    <li><b>Total Trade Number:</b> <i>The count of all executed trades within a specific period, reflecting trading activity.</i></li>
                     <li><b>Win/Loss Ratio:</b> <i>Compares the number of winning trades to losing trades.</i></li>
+                    <li><b>Return on Investment (ROI):</b> <i>Measures the percentage gain or loss relative to the initial investment.</i></li>
+                    <li><b>Maximum Drawdown:</b> <i>Indicates the largest peak-to-trough decline in equity during a specific period.</i></li>
                     <li><b>Average Trade Profit/Loss:</b> <i>Calculates the average profit or loss per trade.</i></li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
-            <h2>Backtesting Essentials</h2>
-            <p>To effectively evaluate a trading strategy, it’s important to use ample historical data covering diverse market conditions. Generating a sufficient number of trades within this data ensures that the results are statistically significant and reflective of various market scenarios.</p>
+            <h2>Total Trade Number</h2>
+            <p>To effectively evaluate a trading strategy, it's crucial to use ample historical data that covers diverse market conditions. Generating a sufficient number of trades within this data helps ensure that the results are statistically significant and reflective of various market scenarios. My back-testing results, which contain 100+ trades, represent a solid starting point for evaluating a trading strategy, particularly for small-scale studies.</p>
         </div>
 
         <div class="section">
@@ -46,15 +46,17 @@
             </p>
             <p>Some strategies may have a low win rate but achieve high profitability by ensuring that the wins are significantly larger than the losses.</p>
             <div class="code">
-                When a trading strategy shows a low win rate yet remains profitable, it is essential to determine whether the success is attributable to random chance or a solid underlying strategy. Key challenges include frequent drawdowns and psychological stress.
+                When a trading strategy exhibits a low win rate but remains profitable, it is crucial to determine whether the success is due to random chance (luck) or a solid underlying strategy. Additionally, managing frequent drawdowns and psychological stress presents a significant challenge.
             </div>
-            <p><b>Quick Summary:</b> With a profit pactor of 3.0 and a 72% win rate over the past 10 years, based on enough number of trades, this strategy appears effective, with good profitability and a high rate of successful trades.</p>
-            <img src="@/assets/images/trading/result_spy_xyld.png">
+            <p>This strategy yields the following results:</p>
+            <p><img src="@/assets/images/trading/result_spy_xyld.png"></p>
+            <p>With a profit pactor of 3.0 and a 72% win rate over the past 10 years, based on enough number of trades, this strategy appears effective, with good profitability and a high rate of successful trades.</p>
+            
         </div>
 
         <div class="section">
             <h2>Return on Investment (ROI)</h2>
-            <p>When calculating ROI, the Annualized Rate of Return (ARR) is typically used. This strategy has achieved an annual rate of 12.3% over the past 10 years. Additionally, it's important to consider factors such as the equity curve and drawdowns. Ideally, the equity curve should exhibit a consistent upward trend, and significant drawdowns should be minimized.</p>
+            <p>When calculating ROI, the <b>Annualized Rate of Return (ARR)</b> is typically used. This strategy has achieved an annual rate of 12.3% over the past 10 years. Additionally, it's important to consider factors such as the equity curve and drawdowns. Ideally, the equity curve should exhibit a consistent upward trend, and significant drawdowns should be minimized.</p>
             <img src="@/assets/images/trading/equity_spy_xyld.png">
             <p>When applying <b>linear regression</b> to the equity curve, the observed upward slope suggests that the strategy is likely to remain profitable over time.</p>            
         </div>        
@@ -77,7 +79,7 @@
 
         <div class="section">
             <h2>Summary</h2>
-            <p>This simple trading strategy has shown good performance over the last decade. It has a <b>Profit Factor of 3.0</b>, meaning it earns more than three times as much from winning trades compared to losing trades. It <b>wins 72%</b> of the time, so it has a higher success rate than lossing trades. <b>On average, each trade yields a return of 1.29%</b>. The <b>103 trades</b> are evenly distributed, which helps in managing risk and avoiding large losses. Importantly, there are <b>no significant drawdowns</b>, indicating stable performance without major drops in equity. Overall, the strategy appears to be both profitable and reliable.</p>
+            <p>This simple trading strategy has shown good performance over the last decade. It has a <b>Profit Factor of 3.0</b>, meaning it earns more than three times as much from winning trades compared to losing trades. The strategy has a higher success rate than its loss rate. It <b>wins 72%</b> of the time.<b>On average, each trade yields a return of 1.29%</b>. The <b>103 trades</b> are evenly distributed, which helps in managing risk and avoiding large losses. Importantly, there are <b>no significant drawdowns</b>, indicating stable performance without major drops in equity. Overall, the strategy appears to be both profitable and reliable.</p>
             <p>We’ll see how it performs against new, untested data in a real-world stock trading competition.</p>            
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
         </div>
