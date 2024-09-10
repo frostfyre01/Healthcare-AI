@@ -48,13 +48,13 @@
             <div class="code">
                 When a trading strategy shows a low win rate yet remains profitable, it is essential to determine whether the success is attributable to random chance or a solid underlying strategy. Key challenges include frequent drawdowns and psychological stress.
             </div>
-            <p><b>Quick Summary:</b> With a profit pactor of 2.3 and a 65% win rate over the past 10 years, based on enough number of trades, this strategy appears effective, with good profitability and a high rate of successful trades.</p>
+            <p><b>Quick Summary:</b> With a profit pactor of 3.0 and a 72% win rate over the past 10 years, based on enough number of trades, this strategy appears effective, with good profitability and a high rate of successful trades.</p>
             <img src="@/assets/images/trading/result_spy_xyld.png">
         </div>
 
         <div class="section">
             <h2>Return on Investment (ROI)</h2>
-            <p>When calculating ROI, the Annual Percentage Rate (APR) is typically used. This strategy has achieved an annual rate of 10.9% over the past 10 years. Additionally, it's important to consider factors such as the equity curve and drawdowns. Ideally, the equity curve should exhibit a consistent upward trend, and significant drawdowns should be minimized.</p>
+            <p>When calculating ROI, the Annualized Rate of Return (ARR) is typically used. This strategy has achieved an annual rate of 12.3% over the past 10 years. Additionally, it's important to consider factors such as the equity curve and drawdowns. Ideally, the equity curve should exhibit a consistent upward trend, and significant drawdowns should be minimized.</p>
             <img src="@/assets/images/trading/equity_spy_xyld.png">
             <p>When applying <b>linear regression</b> to the equity curve, the observed upward slope suggests that the strategy is likely to remain profitable over time.</p>            
         </div>        
@@ -70,14 +70,14 @@
                 Expected Return = (Win Rate × Average Profit Percentage) − (Loss Rate × Average Loss)
             </div>
             <div class="code">
-                Expected Return = (0.65 × 2.86%) − (0.35 × 2.14%) = 1.11%
+                Expected Return = (0.72 × 2.69%) − (0.28 × 2.32%) = 1.29%
             </div>
-            <p><i>This indicates that the strategy is projected to yield an average return of around +1.10% per trade. With a win rate of 65%, it offers a favorable risk/reward ratio, as the average gain exceeds the average loss.</i></p>
+            <p><i>This indicates that the strategy is projected to yield an average return of around +1.29% per trade. With a win rate of 72%, it offers a favorable risk/reward ratio, as the average gain exceeds the average loss.</i></p>
         </div>
 
         <div class="section">
             <h2>Summary</h2>
-            <p>This simple trading strategy has shown good performance over the last decade. It has a Profit Factor of 2.32, meaning it earns more than twice as much from winning trades compared to losing trades. It wins 65% of the time, so it has a higher success rate than most strategies. On average, each trade yields a return of 1.11%. The 106 trades are evenly distributed, which helps in managing risk and avoiding large losses. Importantly, there are no significant drawdowns, indicating stable performance without major drops in equity. Overall, the strategy appears to be both profitable and reliable.</p>
+            <p>This simple trading strategy has shown good performance over the last decade. It has a <b>Profit Factor of 3.0</b>, meaning it earns more than three times as much from winning trades compared to losing trades. It <b>wins 72%</b> of the time, so it has a higher success rate than lossing trades. <b>On average, each trade yields a return of 1.29%</b>. The <b>103 trades</b> are evenly distributed, which helps in managing risk and avoiding large losses. Importantly, there are <b>no significant drawdowns</b>, indicating stable performance without major drops in equity. Overall, the strategy appears to be both profitable and reliable.</p>
             <p>We’ll see how it performs against new, untested data in a real-world stock trading competition.</p>            
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
         </div>

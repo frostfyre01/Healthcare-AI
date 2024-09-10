@@ -13,7 +13,7 @@
                 corr_matrix = df.corr()
             </div>                            
             <div class="code">
-                correlation = df['SPY'].corr(df['XYLD'])
+                correlation = df['SPY_Change'].corr(df['XYLD_Change'])
             </div>            
             <img src="@/assets/images/trading/correlation_spy_xyld.png">
         </div>
@@ -42,15 +42,15 @@
             <h2>Optimization</h2>
             <p>Adjust and refine the strategy parameters to improve performance, but avoid overfitting to historical data, which can lead to poor future performance.</p>
             <div class="code">
-                <p>BUY_THREAHOLD = -0.005</p>
-                <p>SELL_TARGET = 0.035</p>
+                <p>BUY_THREAHOLD = -0.004</p>
+                <p>SELL_TARGET = 0.05</p>
                 <p>MAX_POSITION_DAY = 10</p>
             </div>            
         </div>
 
         <div class="section">
             <h2>Backtesting Result</h2>
-            <p>Over the past 10 years, our simulation resulted in <b>106 trades</b>. These will be evaluated in the following section.</p>
+            <p>Over the past 10 years, our simulation resulted in <b>103 trades</b>. These will be evaluated in the following section.</p>
             <img src="@/assets/images/trading/trade_spy_xyld.png">
             <p></p>
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
