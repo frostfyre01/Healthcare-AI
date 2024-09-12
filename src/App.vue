@@ -16,7 +16,9 @@
 
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer" />
-      <v-toolbar-title>My Application</v-toolbar-title>
+      <a href="/" class="v-btn v-btn--text v-btn--router ma-0 pa-0">
+        My Application
+      </a>
       <v-spacer />
     </v-app-bar>
 

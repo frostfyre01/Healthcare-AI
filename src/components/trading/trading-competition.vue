@@ -2,11 +2,12 @@
    <div class="container">
         <div class="section">
             <h2>More Strategies</h2>
-            <p>Before entering the stock trading competition, I created several new trading strategies based on the same trading logic, focusing mainly on highly correlated Index ETFs. Most of these strategies produced comparable results, with a Profit Factor (PF) exceeding 2.5 and a win rate above 65%. This supports the effectiveness of the trading logic.</p>
-            <p>Here, I have included a couple of equity curves and the Annualized Rate of Return (ARR).</p>
+            <p>Before entering the stock trading competition, I created several new trading strategies based on the same trading logic, focusing mainly on highly correlated Index ETFs and stocks, such like Master Card(MA) and Visa(V). Most of these strategies produced comparable results, with a Profit Factor (PF) exceeding 2.5 and a win rate above 65%. This supports the effectiveness of the trading logic. Here, I have included a few equity curves and the Annualized Rate of Return (ARR).</p>
             <img src="@/assets/images/trading/equity_qqq_qyld.png">
             <p></p>
             <img src="@/assets/images/trading/equity_iwm_spy.png">
+            <p></p>
+            <img src="@/assets/images/trading/equity_ma_v.png">
         </div>
 
         <div class="section">
