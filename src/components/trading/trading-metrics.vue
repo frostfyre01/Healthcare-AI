@@ -1,8 +1,8 @@
 <template>
    <div class="container">
         <v-alert type="info" border="left" prominent>
-            Please use the following link to access the Google Colab Jupyter Notebook:
-            <v-btn text @click="openLink" class="ml-2">Open Colab Notebook</v-btn>
+            Please use the following link to access the Jupyter Notebook:
+            <v-btn text @click="openLink" class="ml-2">Open Notebook</v-btn>
             <v-btn text @click="downloadNotebook('SPY_Analysis.ipynb')" class="ml-2">Download Notebook</v-btn>
         </v-alert>
 
@@ -56,7 +56,7 @@
 
         <div class="section">
             <h2>Return on Investment (ROI)</h2>
-            <p>When calculating ROI, the <b>Annualized Rate of Return (ARR)</b> is typically used. This strategy has achieved an annual rate of 12.3% over the past 10 years. Additionally, it's important to consider factors such as the equity curve and drawdowns. Ideally, the equity curve should exhibit a consistent upward trend, and significant drawdowns should be minimized.</p>
+            <p>When calculating ROI, the <b>Annualized Rate of Return (ARR)</b> is typically used. This strategy has achieved an annual rate of 12.4% over the past 10 years. Additionally, it's important to consider factors such as the equity curve and drawdowns. Ideally, the equity curve should exhibit a consistent upward trend, and significant drawdowns should be minimized.</p>
             <img src="@/assets/images/trading/equity_spy_xyld.png">
             <p>When applying <b>linear regression</b> to the equity curve, the observed upward slope suggests that the strategy is likely to remain profitable over time.</p>            
         </div>        
@@ -72,16 +72,23 @@
                 Expected Return = (Win Rate × Average Profit Percentage) − (Loss Rate × Average Loss)
             </div>
             <div class="code">
-                Expected Return = (0.72 × 2.69%) − (0.28 × 2.32%) = 1.29%
+                Expected Return = (0.72 × 2.68%) − (0.28 × 2.32%) = 1.28%
             </div>
-            <p><i>This indicates that the strategy is projected to yield an average return of around +1.29% per trade. With a win rate of 72%, it offers a favorable risk/reward ratio, as the average gain exceeds the average loss.</i></p>
+            <p><i>This indicates that the strategy is projected to yield an average return of around +1.28% per trade. With a win rate of 72%, it offers a favorable risk/reward ratio, as the average gain exceeds the average loss.</i></p>
         </div>
 
         <div class="section">
             <h2>Summary</h2>
-            <p>This simple trading strategy has shown good performance over the last decade. It has a <b>Profit Factor of 3.0</b>, meaning it earns more than three times as much from winning trades compared to losing trades. The strategy has a higher success rate than its loss rate. It <b>wins 72%</b> of the time.<b>On average, each trade yields a return of 1.29%</b>. The <b>103 trades</b> are evenly distributed, which helps in managing risk and avoiding large losses. Importantly, there are <b>no significant drawdowns</b>, indicating stable performance without major drops in equity. Overall, the strategy appears to be both profitable and reliable.</p>
+            <p>This simple trading strategy has shown good performance over the last decade. It has a <b>Profit Factor of 3.0</b>, meaning it earns more than three times as much from winning trades compared to losing trades. The strategy has a higher success rate than its loss rate. It <b>wins 72%</b> of the time.<b>On average, each trade yields a return of 1.28%</b>. The <b>104 trades</b> are evenly distributed, which helps in managing risk and avoiding large losses. Importantly, there are <b>no significant drawdowns</b>, indicating stable performance without major drops in equity. Overall, the strategy appears to be both profitable and reliable.</p>
             <p>We’ll see how it performs against new, untested data in a real-world stock trading competition.</p>            
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
+        </div>
+
+        <div class="section">
+            <h2>Further Notes</h2>
+            <p>Although the strategy's annual return of 12.4% is slightly lower than the buy-and-hold return of SPY, it presents a much lower risk profile. </p>
+            <img src="@/assets/images/trading/spy.png">
+            <p>When comparing the equity curve to SPY's price, we observe that SPY experienced maximum drawdowns of -30% in 2020 and -25% in 2022. In contrast, the maximum drawdown for this strategy was about <b>-7%</b>. This suggests that trading with the strategy has significantly lower risk compared to buy-and-hold SPY. To potentially boost overall returns, we could consider using leverage, which may increase both risk and return.</p>
         </div>
 
     </div>
@@ -94,7 +101,7 @@ export default {
         this.$emit('change-tab', 'competition');
     },
     openLink() {
-      window.open('https://colab.research.google.com/drive/1m-PmvNwIWM7DBu0JbYI9-acTEg0f83Iz?usp=sharing', '_blank');
+      window.open('https://deepnote.com/app/healthcare-ai-web/Stock-trading-analysis-project-a1dba5c8-7531-4272-828d-1fa518690a99', '_blank');
     },
     downloadNotebook(fileName) {
         const notebookUrl = '/downloads/' + fileName;

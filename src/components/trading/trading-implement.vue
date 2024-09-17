@@ -1,8 +1,8 @@
 <template>
    <div class="container">
         <v-alert type="info" border="left" prominent>
-            Please use the following link to access the Google Colab Jupyter Notebook:
-            <v-btn text @click="openLink" class="ml-2">Open Colab Notebook</v-btn>
+            Please use the following link to access the Jupyter Notebook:
+            <v-btn text @click="openLink" class="ml-2">Open Notebook</v-btn>
             <v-btn text @click="downloadNotebook('SPY_Analysis.ipynb')" class="ml-2">Download Notebook</v-btn>
         </v-alert>
 
@@ -50,7 +50,7 @@
 
         <div class="section">
             <h2>Backtesting Result</h2>
-            <p>Over the past 10 years, our simulation resulted in <b>103 trades</b>. These will be evaluated in the following section.</p>
+            <p>Over the past 10 years, our simulation resulted in <b>104 trades</b>. These will be evaluated in the following section.</p>
             <img src="@/assets/images/trading/trade_spy_xyld.png">
             <p></p>
             <v-btn color="primary" @click="handleButtonClick">Learn More</v-btn>
@@ -65,7 +65,7 @@ export default {
         this.$emit('change-tab', 'metrics');
     },
     openLink() {
-      window.open('https://colab.research.google.com/drive/1m-PmvNwIWM7DBu0JbYI9-acTEg0f83Iz?usp=sharing', '_blank');
+      window.open('https://deepnote.com/app/healthcare-ai-web/Stock-trading-analysis-project-a1dba5c8-7531-4272-828d-1fa518690a99', '_blank');
     },
     downloadNotebook(fileName) {
         const notebookUrl = '/downloads/' + fileName;
