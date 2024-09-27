@@ -39,6 +39,7 @@
 
         <v-tabs-window-item value="application">
           <ImageUpload imagetype="mpox"/>
+          <FileTable :files="sampleFiles" />
         </v-tabs-window-item>
       </v-tabs-window>
     </v-card-text>
@@ -47,13 +48,22 @@
 
 <script>
 import ImageUpload from '../components/ImageUpload.vue';
+import FileTable from '../components/FileTable.vue';
 
 export default {
   components: {
     ImageUpload,
+    FileTable
   },
   data: () => ({
       tab: null,
+      sampleFiles: [
+        { name: 'sample_15.png', url: 'sample_pics/mpox/sample_15.png' },
+        { name: 'sample_16.png', url: 'sample_pics/mpox/sample_16.png' },
+        { name: 'sample_35.jpg', url: 'sample_pics/mpox/sample_35.jpg' },
+        { name: 'sample_49.png', url: 'sample_pics/mpox/sample_49.png' },
+        { name: 'sample_50.png', url: 'sample_pics/mpox/sample_50.png' },
+      ]
     }),
 }
 </script>

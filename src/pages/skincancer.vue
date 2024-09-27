@@ -39,6 +39,7 @@
 
         <v-tabs-window-item value="application">
           <ImageUpload imagetype="sc"/>
+          <FileTable :files="sampleFiles" />
         </v-tabs-window-item>
       </v-tabs-window>
     </v-card-text>
@@ -47,13 +48,23 @@
 
 <script>
 import ImageUpload from '../components/ImageUpload.vue';
+import FileTable from '../components/FileTable.vue';
 
 export default {
   components: {
     ImageUpload,
+    FileTable
   },
   data: () => ({
       tab: null,
+      sampleFiles: [
+        { name: 'sample_1.jpg', url: 'sample_pics/skincancer/sample_1.jpg' },
+        { name: 'sample_2.jpg', url: 'sample_pics/skincancer/sample_2.jpg' },
+        { name: 'sample_3.jpg', url: 'sample_pics/skincancer/sample_3.jpg' },
+        { name: 'sample_4.jpg', url: 'sample_pics/skincancer/sample_4.jpg' },
+        { name: 'sample_5.jpg', url: 'sample_pics/skincancer/sample_5.jpg' },
+        { name: 'sample_6.jpg', url: 'sample_pics/skincancer/sample_6.jpg' },
+      ]
     }),
 }
 </script>
