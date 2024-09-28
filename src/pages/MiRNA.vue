@@ -26,19 +26,19 @@
         </v-tabs-window-item>
 
         <v-tabs-window-item value="data">
-          data
+          <miRNA_data @change-tab="handleTabChange"/>
         </v-tabs-window-item>
 
         <v-tabs-window-item value="model">
-          model
+          <miRNA_model @change-tab="handleTabChange"/>
         </v-tabs-window-item>
 
         <v-tabs-window-item value="metrics">
-          metrics
+          <miRNA_metrics @change-tab="handleTabChange"/>
         </v-tabs-window-item>
 
         <v-tabs-window-item value="application">
-            <miRNA_Input/>
+          <miRNA_application @change-tab="handleTabChange"/>
         </v-tabs-window-item>
       </v-tabs-window>
     </v-card-text>
@@ -48,11 +48,19 @@
 <script>
 import miRNA_Input from '../components/miRNA_Input.vue';
 import miRNA_overview from '../components/miRNA/miRNA-overview.vue'
+import miRNA_data from '../components/miRNA/miRNA-data.vue'
+import miRNA_model from '../components/miRNA/miRNA-model.vue'
+import miRNA_metrics from '../components/miRNA/miRNA-metrics.vue'
+import miRNA_application from '../components/miRNA/miRNA-application.vue'
 
 export default {
   components: {
     miRNA_Input,
-    miRNA_overview
+    miRNA_overview,
+    miRNA_data,
+    miRNA_model,
+    miRNA_metrics,
+    miRNA_application,
   },
   data: () => ({
         tab: null,
