@@ -2,7 +2,7 @@
   <v-container>
     <div class="text-Left">
       <div class="text-body-4 font-weight-light mb-n1 page-title"><v-icon>mdi-dna</v-icon>&nbsp;miRNA</div>
-      <h2 class="text-h4 font-weight-black">Lung cancer detection</h2>
+      <h2 class="text-h4 font-weight-black">miRNA Biomarkers: A Path to Earlier Cancer Diagnosis</h2>
       <hr/>
       <br/>
     </div>
@@ -22,7 +22,7 @@
     <v-card-text>
       <v-tabs-window v-model="tab">
         <v-tabs-window-item value="overview">
-          overview
+          <miRNA_overview @change-tab="handleTabChange"/>
         </v-tabs-window-item>
 
         <v-tabs-window-item value="data">
@@ -47,14 +47,21 @@
 
 <script>
 import miRNA_Input from '../components/miRNA_Input.vue';
+import miRNA_overview from '../components/miRNA/miRNA-overview.vue'
 
 export default {
   components: {
     miRNA_Input,
+    miRNA_overview
   },
   data: () => ({
-      tab: null,
+        tab: null,
     }),
+    methods: {
+      handleTabChange(newTab) {
+        this.tab = newTab;
+    }
+  }
 }
 </script>
 
