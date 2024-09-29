@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import miRNA_Input from '../components/miRNA_Input.vue';
+import miRNA_Input from '../components/miRNA/miRNA_Input.vue';
 import miRNA_overview from '../components/miRNA/miRNA-overview.vue'
 import miRNA_data from '../components/miRNA/miRNA-data.vue'
 import miRNA_model from '../components/miRNA/miRNA-model.vue'

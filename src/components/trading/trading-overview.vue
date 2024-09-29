@@ -2,7 +2,7 @@
    <div class="container">
         <div class="section">
             <h2>Overview</h2>
-            <p>This summer, I participated in a high school stock trading competition, which gave me the chance to explore the world of stock trading from a fresh perspective. By leveraging my data analytics skills, I implemented several trading strategies, allowing me to delve deeper into the nuances of rule-based trading. This experience not only improved my analytical skills but also offered valuable insights into how systematic approaches can impact trading outcomes. I applied my newly developed strategies in the competition and won first place, earning a $600 award out of over 300 participants.</p>
+            <p>This summer, I participated in a national high school stock trading competition, which gave me the chance to explore the world of stock trading from a fresh perspective. By leveraging my data analytics skills, I implemented several trading strategies, allowing me to delve deeper into the nuances of rule-based trading. This experience not only improved my analytical skills but also offered valuable insights into how systematic approaches can impact trading outcomes. I applied my newly developed strategies in the competition and won first place, earning a $600 award out of over 300 participants.</p>
             <p>In light of this experience, I'm sharing the detailed analysis of the data-driven approach I employed, the specific trading rules I implemented, and the outcomes achieved. I aim to offer insights and practical guidance for those interested in rule-based trading, while also reflecting on the effectiveness of different trading strategies in actual market conditions.</p>
         </div>
 

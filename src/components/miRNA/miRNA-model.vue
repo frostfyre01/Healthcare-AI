@@ -1,5 +1,10 @@
 <template>
    <div class="container">
+        <v-alert type="info" border="left" prominent>
+            Please use the following link to access the Jupyter Notebook:
+            <v-btn text @click="openLink" class="ml-2">Open Notebook</v-btn>
+            <v-btn text @click="downloadNotebook('SPY_Analysis.ipynb')" class="ml-2">Download Notebook</v-btn>
+        </v-alert>
         <div class="section">
             <h2>Overview</h2>
             <p>This summer, I participated in a high school stock trading competition, which gave me the chance to explore the world of stock trading from a fresh perspective. By leveraging my data analytics skills, I implemented several trading strategies, allowing me to delve deeper into the nuances of rule-based trading. This experience not only improved my analytical skills but also offered valuable insights into how systematic approaches can impact trading outcomes. I applied my newly developed strategies in the competition and won first place, earning a $600 award out of over 300 participants.</p>
@@ -64,8 +69,11 @@
 export default {
   methods: {
     handleButtonClick() {
-        this.$emit('change-tab', 'data');
-    }
+        this.$emit('change-tab', 'metrics');
+    },
+    openLink() {
+      window.open('https://deepnote.com/app/healthcare-ai-web/miRNA-cancer-detection-8bcf6c22-7a5a-48dc-85d6-e976abbf3aaa', '_blank');
+    },
   }
 }
 </script>
