@@ -13,16 +13,15 @@
 
         <div class="section">
             <h2>Model Training</h2>
-            <p>Stock trading is challenging for beginners due to the complexities of market analysis, emotional decision-making, and risk management. Understanding market trends, choosing the right stocks, and developing effective strategies can be overwhelming. Additionally, the emotional ups and downs and potential for losses can make trading stressful and difficult.</p>
-            <p>Rule-based methods can assist in handling various trading challenges. Rule-based trading involves following predefined criteria for buying and selling assets. Traders set specific rules based on indicators or data, which determine entry and exit points. This approach reduces emotional influence and ensures consistent, systematic decision-making, leading to more predictable trading results.</p>
-            <p>Here are a few benefits of rule-based trading:</p>
-            <div style="margin-left: 30px;">
-                <ul>
-                    <li><b>Consistency:</b> <i>Adheres to predefined criteria, reducing emotional decision-making, avoiding impulsive trades.</i></li>
-                    <li><b>Backtesting:</b> <i>Allows for the evaluation of strategies using historical data, enabling us to estimate the outcomes of trading under similar market conditions.</i></li>
-                    <li><b>Efficiency:</b> <i>Automates trading decisions, saving time and effort.</i></li>
-                </ul>
-            </div>
+            <div class="code">
+                <p>feature_list = [feature1, feature2]</p>
+                <p>X = train_data.loc[:, train_data.columns.isin(feature_list)]</p>
+                <p>y = train_data['class']</p>
+                <p>X_train, X_val, y_train, y_val = train_test_split(X, y, random_state=1)</p>
+                <p>model = xgb.XGBClassifier()</p>
+                <p>model.fit(X_train, y_train)</p>
+                <p>model.save_model(s_no + '.xgb')</p>
+            </div> 
 
         </div>
 
