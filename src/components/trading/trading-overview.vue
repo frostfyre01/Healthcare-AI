@@ -23,18 +23,37 @@
 
         <div class="section">
             <h2>Trading Expectancy</h2>
-            <p>In simple terms, when we analyze a trading system using a systematic approach, we focus on ensuring that the trading expectancy is positive. <b>Trading Expectancy</b> is calculated as:</p>
-            <img src="@/assets/images/trading/expectancy.png">
             <p>Imagine a betting game where you place a $2 bet each time to draw a marble from a bag containing 6 red marbles and 4 black marbles. The rules are as follows:
                 <ul style="margin-left: 30px;">
                     <li>If you draw a red marble, you win $3.</li>
                     <li>If you draw a black marble, you lose your $2 bet.</li>
+                    <li>After each draw, the marble is placed back in the bag.</li>
                 </ul>
             </p>
-            <p>In this game, even though you have a higher probability of winning money, the expected value is negative.</p>
-            <p class="code">Expected Value = (0.6 × 1) + (0.4 × (−2)) = 0.6 − 0.8 = −0.2<br/>
-            The expected value of this betting game is −$0.20. This means that, on average, you would lose 20 cents per bet in the long run.
+            <p><b>Probabilities:</b></p>
+            <p>When playing this game, we can determine the following probabilities:
+                <ul style="margin-left: 30px;">
+                    <li>Probability of Drawing a Red Marble: P(Red) = 6/10 = 0.6</li>
+                    <li>Probability of Drawing a Black Marble: P(Black) = 4/10 = 0.4</li>
+                </ul>
             </p>
+            <p>At first glance, this game appears to be favorable to play, as we have a higher chance of winning money. However, it’s important to consider the <b>expected value (EV)</b>, which reveals that, despite the seemingly good odds, players can still incur losses over time.</p>
+            <p><b>Outcomes:</b>
+                <ul style="margin-left: 30px;">
+                    <li>If we draw a red marble: We win $3, but we need to account for our $2 bet.<br/>
+                        <i>Net Gain: $3 - $2 = $1</i><br/>
+                    </li>
+                    <li>If we draw a black marble: We lose our $2 bet.<br/>
+                        <i>Net Loss: -$2</i><br/>
+                    </li>
+                </ul>
+            </p>
+            <p>In this game, even though we have a higher probability of winning money, the expected value is negative.</p>
+            <p class="code">Expected Value = (0.6 × 1) + (0.4 × (−2)) = 0.6 − 0.8 = −0.2<br/>
+            The expected value of this betting game is −$0.20. This means that, on average, we would lose 20 cents per bet in the long run. Therefore, we should avoid this game, as we are more likely to incur losses rather than gains.
+            </p>
+            <p>By applying the same concept, when we analyze a trading system, we should focus on ensuring that the trading expectancy is positive. <b>Trading Expectancy</b> is calculated as:</p>
+            <img src="@/assets/images/trading/expectancy.png">
             <p><b>Trading Expectancy</b> helps traders evaluate strategies by quantifying their performance. A positive expectancy indicates that the strategy is likely profitable over time, while a negative expectancy suggests potential losses and should generally be avoided.</p>
         </div>
 
